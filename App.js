@@ -88,15 +88,12 @@ const config = {
 };
 
 firebase.initializeApp(config)
+const database = firebase.database()
 
 export default class todo extends Component {
 
   constructor() {
     super()
-
-    
-
-    const database = firebase.database()
 
     this.dbRef = database.ref('react-todo')
 
@@ -110,7 +107,7 @@ export default class todo extends Component {
 
   componentDidMount() {
     // Firebase Listener
-    this.dbRef.on('child_added', (data) => {
+    this.dbRef.on('child_added', (data)=>{
       this.state.items.push({ id: data.key, title: data.val() })
       this.setState({
         itemDatasource: this.state.itemDatasource.cloneWithRows(this.state.items)
