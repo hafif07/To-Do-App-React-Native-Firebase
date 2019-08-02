@@ -1,0 +1,19 @@
+{
+    "latihan": [
+      {
+         "id": 1,
+         "nama": "diwa",
+         "alamat": "kaliurang"
+     },
+     {
+        "id": 2,
+        "nama": "wada",
+        "alamat": "Pekanbaru"
+     },
+     {
+       "id": 3,
+       "nama": "wadi",
+       "alamat": "Pariaman"
+     }
+    ]
+  }
